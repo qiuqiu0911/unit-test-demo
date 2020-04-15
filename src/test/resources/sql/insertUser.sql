@@ -1,0 +1,2 @@
+INSERT INTO `person`(`id`, `name`, `idCard`, `createUser`, `createDate`) VALUES ('1', 'dev', '12345678', 'sadmin', '2020-04-15 15:12:15');
+INSERT INTO `person`(`id`, `name`, `idCard`, `createUser`, `createDate`) VALUES ('2', 'qiuqiu', '2345678', 'sadmin', '2020-04-15 15:12:15');
