@@ -1,9 +1,7 @@
-package cn.qiudev.unittest.jmx;
+package cn.qiudev.unittest.jms;
 
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,12 +16,12 @@ import javax.jms.TextMessage;
 import java.util.List;
 
 @ActiveProfiles("test")
-@SpringBootTest
 @EnableJms
 @Setter
 @Configuration
 @ConfigurationProperties(prefix = "engine-result")
 @Slf4j
+@SpringBootTest
 public class EngineResultMessageSender {
 
     @Autowired
@@ -39,7 +37,6 @@ public class EngineResultMessageSender {
      */
     private List<String> messageList;
 
-    @BeforeEach
     @Test
     @DisplayName("发送引擎结果消息到指定队列")
     public void sendMessageToDemoQueue() {
